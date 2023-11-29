@@ -27,4 +27,21 @@ export default class AppClass extends Component{
   }
 
   // code here
+  render(){
+    const data = this.imageData();
+        return(
+          <div>
+            <h1>Kalvium Gallery</h1>
+            <div id="grid">
+              {data.map((el)=>{
+                return(
+                  <div key={el.id}>
+                    <img src={el.img}/>
+                    </div>
+                );
+              })}
+            </div>
+          </div>
+        )
+      }
 }
